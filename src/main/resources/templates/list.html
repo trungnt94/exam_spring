@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <table class="table table-striped container">
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Date of birth</td>
+        </tr>
+        <tr th:each="candidate : ${pagination.getContent()}">
+            <td th:text="${candidate.name}"></td>
+            <td th:text="${candidate.adrr}"></td>
+            <td th:text="${candidate.dob}"></td>
+        </tr>
+    </table>
+</body>
+</html>
